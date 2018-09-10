@@ -11,9 +11,9 @@ call plug#begin(expand('~/.config/nvim/plug'))
 " Language support
 Plug 'plasticboy/vim-markdown', {'depends': 'godlygeek/tabular'}
 Plug 'lervag/vim-latex'
-"Plug 'pangloss/vim-javascript'
-"Plug 'othree/html5.vim'
-"Plug 'hail2u/vim-css3-syntax'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'fatih/vim-go'
@@ -24,6 +24,7 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'vim-scripts/django.vim'
 Plug 'solarnz/thrift.vim'
 Plug 'vim-jp/vim-cpp'
+Plug 'chemzqm/vim-jsx-improve'
 
 " Looks
 Plug 'bling/vim-airline'

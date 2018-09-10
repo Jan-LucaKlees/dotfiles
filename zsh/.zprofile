@@ -6,7 +6,7 @@
 # Browser
 #
 
-export BROWSER='firefox'
+export BROWSER='chromium'
 
 #
 # Editors
@@ -87,7 +87,11 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 eval `ssh-agent`
 ssh-add /home/jlk/.ssh/id_rsa
 
-# auto start xinit on login
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec startx
+# auto start sway on login
+if [ -z "$DISPLAY" ] && [[ $(tty) = /dev/tty1 ]]; then
+  export XKB_DEFAULT_LAYOUT=us
+  export XKB_DEFAULT_VARIANT=altgr-intl
+  export XKB_DEFAULT_OPTIONS=compose:menu,level3:ralt_switch
+  exec sway
 fi
+

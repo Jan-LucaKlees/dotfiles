@@ -25,9 +25,16 @@ export FZF_CTRL_T_COMMAND="fd -H" # use fd with hidden files for this command
 # .alias.sh just contains some aliases, nothing fancy
 source /home/jlk/.alias.sh
 
+# Don't send SIGHUP to background processes when the shell exits.
+setopt nohup
+
+# make cd push the old directory onto the directory stack.
+setopt auto_pushd
 
 export MAKEFLAGS="-j4"
 export LESS="-RI"
+# avoid "beep"ing
+setopt nobeep
 
 # history settings
 export HISTFILE=/home/jlk/.zsh_history
