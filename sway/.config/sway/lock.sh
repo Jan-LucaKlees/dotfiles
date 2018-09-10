@@ -8,7 +8,7 @@ fi
 # do a blur
 if [ $1 = "blur" ]; then
     img=/tmp/lock.png
-    lock=/home/tronje/.config/i3/lock_resized.png
+    lock=/home/tronje/.config/sway/lock_resized.png
     scrot $img
     # convert $img -blur 0x3 $img
     convert $img -filter Gaussian -resize 50% -define filter:sigma=2 -resize 200% $img
@@ -24,7 +24,7 @@ fi
 
 # do a bluescreen
 if [ $1 = "win" ]; then
-    img=/home/tronje/.config/i3/windoze.png
+    img=/home/tronje/.config/sway/windoze.png
     i3lock -u -p win -i $img
     exit 0
 fi
