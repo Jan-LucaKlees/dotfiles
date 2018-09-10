@@ -12,16 +12,16 @@
 #   - Abbreviated path
 #
 
-function prompt_tronje_pwd {
+function prompt_jlk_pwd {
   local pwd="${PWD/#$HOME/~}"
   if [[ "$pwd" == (#m)[/~] ]]; then
-    _prompt_tronje_pwd="$MATCH"
+    _prompt_jlk_pwd="$MATCH"
   else
-    _prompt_tronje_pwd="${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}/${pwd:t}"
+    _prompt_jlk_pwd="${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}/${pwd:t}"
   fi
 }
 
-function prompt_tronje_precmd {
+function prompt_jlk_precmd {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
 
@@ -31,10 +31,10 @@ function prompt_tronje_precmd {
   fi
 
   # call prompt pwd formatting function
-  prompt_tronje_pwd
+  prompt_jlk_pwd
 }
 
-function prompt_tronje_setup {
+function prompt_jlk_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
@@ -43,7 +43,7 @@ function prompt_tronje_setup {
   autoload -Uz add-zsh-hook
 
   # Add hook for calling git-info before each command.
-  add-zsh-hook precmd prompt_tronje_precmd
+  add-zsh-hook precmd prompt_jlk_precmd
 
   # Set editor-info parameters.
   # this defines what the prompt-thingy will look like
@@ -61,7 +61,7 @@ function prompt_tronje_setup {
   zstyle ':prezto:module:git:info:keys' format 'prompt' '- %b%D '
 
   # Define prompts.
-  PROMPT='%F{cyan}${_prompt_tronje_pwd}%f ${git_info:+${(e)git_info[prompt]}}${editor_info[keymap]} '
+  PROMPT='%F{cyan}${_prompt_jlk_pwd}%f ${git_info:+${(e)git_info[prompt]}}${editor_info[keymap]} '
 }
 
-prompt_tronje_setup "$@"
+prompt_jlk_setup "$@"

@@ -284,11 +284,11 @@
 # [espeak-tg]
 #    # summary = "*"
 #    appname = Telegram Desktop
-#    script = /home/tronje/.config/dunst/tg_espeak.sh
+#    script = /home/jlk/.config/dunst/tg_espeak.sh
 
 # [espeak-batstat]
 #     appname = batstat
-#     script = /home/tronje/.config/dunst/batstat_espeak.sh
+#     script = /home/jlk/.config/dunst/batstat_espeak.sh
 
 # [espeak]
 #     summary = "*"

@@ -3,7 +3,7 @@ Description=switches the wallpaper
 
 [Service]
 Type=oneshot
-ExecStart=/home/tronje/prj/wallpaper-switcher/main.py
+ExecStart=/home/jlk/prj/wallpaper-switcher/main.py
 
 [Install]
 WantedBy=default.target

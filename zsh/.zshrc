@@ -15,7 +15,7 @@ bindkey -v
 source /usr/share/autojump/autojump.zsh
 
 # this enables syntax highlighting, as the name suggests
-source /home/tronje/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/jlk/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # enable fzf keybindings
 # ^T is quite useful, in particular
@@ -23,14 +23,14 @@ source /usr/share/fzf/key-bindings.zsh
 export FZF_CTRL_T_COMMAND="fd -H" # use fd with hidden files for this command
 
 # .alias.sh just contains some aliases, nothing fancy
-source /home/tronje/.alias.sh
+source /home/jlk/.alias.sh
 
 
 export MAKEFLAGS="-j4"
 export LESS="-RI"
 
 # history settings
-export HISTFILE=/home/tronje/.zsh_history
+export HISTFILE=/home/jlk/.zsh_history
 export HISTSIZE=25000
 setopt HIST_IGNORE_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST

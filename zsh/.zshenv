@@ -8,13 +8,13 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 # rust stuff
-export RUST_SRC_PATH=/home/tronje/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
+export RUST_SRC_PATH=/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
 # go
-export GOPATH=/home/tronje/misc/go
+export GOPATH=/home/jlk/misc/go
 
 # node
-export npm_config_prefix=/home/tronje/.node_modules
+export npm_config_prefix=/home/jlk/.node_modules
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then

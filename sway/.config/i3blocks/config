@@ -44,7 +44,7 @@ markup=none
 [volume]
 #label=VOL
 label=♪
-command=/home/tronje/.config/sway/volume.py
+command=/home/jlk/.config/sway/volume.py
 #instance=Master
 #instance=PCM
 interval=once
@@ -136,12 +136,12 @@ color=#e180cc
 
 # custom battery indicator
 [custombatteryzero]
-command=/home/tronje/.config/i3blocks/batstat.py 0
+command=/home/jlk/.config/i3blocks/batstat.py 0
 markup=pango
 interval=30
 
 [custombatteryone]
-command=/home/tronje/.config/i3blocks/batstat.py 1
+command=/home/jlk/.config/i3blocks/batstat.py 1
 markup=pango
 interval=30
 

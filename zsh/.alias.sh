@@ -38,7 +38,7 @@ alias clippy='rustup run nightly cargo clippy'
 alias c='cargo'
 
 # misc
-alias newdir='eval $(/home/tronje/prj/newdir/newdir.py)'
+alias newdir='eval $(/home/jlk/prj/newdir/newdir.py)'
 alias py='python'
 alias weather='curl -s wttr.in/Hamburg'
 alias icat='kitty icat --align=left'

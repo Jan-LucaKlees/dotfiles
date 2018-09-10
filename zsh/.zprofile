@@ -25,13 +25,13 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # rust stuff
-export RUST_SRC_PATH=/home/tronje/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
+export RUST_SRC_PATH=/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
 # go
-export GOPATH=/home/tronje/misc/go
+export GOPATH=/home/jlk/misc/go
 
 # node
-export npm_config_prefix=/home/tronje/.node_modules
+export npm_config_prefix=/home/jlk/.node_modules
 
 
 # Ensure path arrays do not contain duplicates.
@@ -45,15 +45,15 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  /home/tronje/.cargo/bin
-  /home/tronje/.local/bin
-  /home/tronje/.node_modules/bin
+  /home/jlk/.cargo/bin
+  /home/jlk/.local/bin
+  /home/jlk/.node_modules/bin
   $path
 )
 
 # add dir with some completions to fpath
 fpath=(
-  /home/tronje/.zsh-completions
+  /home/jlk/.zsh-completions
   $fpath
 )
 
@@ -85,7 +85,7 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 
 # unlock ssh key
 eval `ssh-agent`
-ssh-add /home/tronje/.ssh/id_rsa
+ssh-add /home/jlk/.ssh/id_rsa
 
 # auto start xinit on login
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then

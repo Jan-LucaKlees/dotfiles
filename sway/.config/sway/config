@@ -66,7 +66,7 @@ bindsym $mod+d exec rofi -show combi
 # lock
 #bindsym XF86Launch1 exec i3lock -c 222222
 #bindsym XF86PowerOff exec i3lock -c 222222
-bindsym XF86PowerOff exec /home/tronje/.config/sway/lock.sh blur
+bindsym XF86PowerOff exec /home/jlk/.config/sway/lock.sh blur
 
 # change focus
 bindsym $mod+h focus left
@@ -75,7 +75,7 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # focus a window (in-between of float and fullscreen)
-bindsym $mod+slash exec /home/tronje/.config/sway/focus.py
+bindsym $mod+slash exec /home/jlk/.config/sway/focus.py
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
