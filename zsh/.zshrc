@@ -97,11 +97,11 @@ function delimiter_jobs () {
 grml_theme_add_token virtual_env -f virtual_env_prompt '' ''
 grml_theme_add_token abbreviated-path -f abbr_path_prompt '%B' '%b'
 grml_theme_add_token gitinfo -f git_info '%B' '%b'
-grml_theme_add_token delimiter -f delimiter_jobs '' ''
-grml_theme_add_token arrow '-> '
+grml_theme_add_token delimiter -f delimiter_jobs '' ' '
+grml_theme_add_token arrow '> '
 
 # and update the left-hand side of the prompt
-zstyle ':prompt:grml:left:setup' items rc user at host virtual_env abbreviated-path gitinfo delimiter newline arrow
+zstyle ':prompt:grml:left:setup' items rc user at host virtual_env abbreviated-path gitinfo delimiter
 
 
 #
