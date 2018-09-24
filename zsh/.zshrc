@@ -15,7 +15,7 @@ bindkey -v
 source /usr/share/autojump/autojump.zsh
 
 # this enables syntax highlighting, as the name suggests
-source /home/jlk/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # enable fzf keybindings
 # ^T is quite useful, in particular
