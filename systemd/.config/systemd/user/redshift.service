@@ -3,7 +3,7 @@ Description=Starts redshift on systemstart
 
 [Service]
 Type=oneshot
-ExecStart= /usr/bin/redshift -m wayland -l 53:9
+ExecStart= /usr/bin/redshift -m wayland -l 53:9 -t 6500:2300
 
 [Install]
 WantedBy=default.target
