@@ -1,0 +1,9 @@
+[Unit]
+Description=Starts redshift on systemstart
+
+[Service]
+Type=oneshot
+ExecStart= /usr/bin/redshift -m wayland -l 53:9
+
+[Install]
+WantedBy=default.target
