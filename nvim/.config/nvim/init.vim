@@ -9,57 +9,57 @@
 call plug#begin(expand('~/.config/nvim/plug'))
 
 " Language support
-Plug 'plasticboy/vim-markdown', {'depends': 'godlygeek/tabular'}
-Plug 'lervag/vim-latex'
+" Plug 'plasticboy/vim-markdown', {'depends': 'godlygeek/tabular'}
+" Plug 'lervag/vim-latex'
 Plug 'pangloss/vim-javascript'
+Plug 'chemzqm/vim-jsx-improve'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'rust-lang/rust.vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'rust-lang/rust.vim'
+" Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'fatih/vim-go'
-Plug 'cespare/vim-toml'
-"Plug 'neovimhaskell/haskell-vim'
-Plug 'elmcast/elm-vim'
+" Plug 'cespare/vim-toml'
+" Plug 'neovimhaskell/haskell-vim'
+" Plug 'elmcast/elm-vim'
 Plug 'mitsuhiko/vim-python-combined'
-Plug 'vim-scripts/django.vim'
-Plug 'solarnz/thrift.vim'
-Plug 'vim-jp/vim-cpp'
-Plug 'chemzqm/vim-jsx-improve'
+" Plug 'vim-scripts/django.vim'
+" Plug 'solarnz/thrift.vim'
+" Plug 'vim-jp/vim-cpp'
 
 " Looks
 Plug 'bling/vim-airline'
-"Plug 'flazz/vim-colorschemes'
-"Plug 'gorodinskiy/vim-coloresque' " breaks . keyword
-"Plug 'luochen1990/rainbow'
+" Plug 'flazz/vim-colorschemes'
+" Plug 'gorodinskiy/vim-coloresque' " breaks . keyword
+" Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 
 " Functionality
-"Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'Raimondi/delimitMate'
+" Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
-Plug 'xuhdev/vim-latex-live-preview', { 'for':'tex' }
+" Plug 'xuhdev/vim-latex-live-preview', { 'for':'tex' }
 Plug 'rhysd/vim-clang-format'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'qpkorr/vim-bufkill'
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nixprime/cpsm', {'do': './install.sh'}
 Plug 'tacahiroy/ctrlp-funky'
-Plug 'vim-scripts/a.vim'
+" Plug 'vim-scripts/a.vim'
 Plug 'romainl/vim-qf'
 
 " Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'zchee/deoplete-jedi'
+" Plug 'sebastianmarkow/deoplete-rust'
+" Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
