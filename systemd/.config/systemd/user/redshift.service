@@ -1,9 +1,12 @@
 [Unit]
-Description=Starts redshift on systemstart
+Description=Redshift display colour temperature adjustment
+Documentation=http://jonls.dk/redshift/
+After=display-manager.service
 
 [Service]
-Type=oneshot
-ExecStart= /usr/bin/redshift -m wayland -l 53:9 -t 6500:2300
+ExecStart=/home/jlk/redshift/root/bin/redshift -m wayland -l 53:9 -t 6500:2300
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=default.target
