@@ -22,6 +22,7 @@ Plug 'hail2u/vim-css3-syntax'
 " Plug 'neovimhaskell/haskell-vim'
 " Plug 'elmcast/elm-vim'
 Plug 'mitsuhiko/vim-python-combined'
+Plug 'Glench/Vim-Jinja2-Syntax'
 " Plug 'vim-scripts/django.vim'
 " Plug 'solarnz/thrift.vim'
 " Plug 'vim-jp/vim-cpp'
@@ -55,6 +56,7 @@ Plug 'nixprime/cpsm', {'do': './install.sh'}
 Plug 'tacahiroy/ctrlp-funky'
 " Plug 'vim-scripts/a.vim'
 Plug 'romainl/vim-qf'
+Plug 'editorconfig/editorconfig-vim'
 
 " Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -116,9 +118,9 @@ set directory=/tmp      " swap file directory
 
 " tabs and indenting
 " set expandtab           " insert spaces instead of tab chars
-set tabstop=4           " a n-space tab width
-set shiftwidth=4        " allows the use of < and > for VISUAL indenting
-" set softtabstop=4       " counts n spaces when DELETE or BCKSPCE is used
+set tabstop=2           " a n-space tab width
+set shiftwidth=2        " allows the use of < and > for VISUAL indenting
+set softtabstop=2       " counts n spaces when DELETE or BCKSPCE is used
 set autoindent          " auto indents next new line
 set smarttab            " remember indent
 set listchars=tab:→·    " show trail spaces and tabstchars
