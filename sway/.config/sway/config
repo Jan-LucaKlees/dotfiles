@@ -237,3 +237,8 @@ bar {
 #exec --no-startup-id feh --bg-scale pics/wallpapers/amsterdam.jpg
 exec --no-startup-id feh --bg-scale pics/wallpapers/space_guy.jpg
 exec --no-startup-id compton
+
+input 2:14:ETPS/2_Elantech_Touchpad {
+    pointer_accel 0.6
+}
+
