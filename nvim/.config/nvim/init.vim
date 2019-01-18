@@ -44,6 +44,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/syntastic'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for':'tex' }
 Plug 'rhysd/vim-clang-format'
