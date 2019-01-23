@@ -2,8 +2,6 @@
 alias ls='ls --group-directories-first --color=auto'
 alias cp='cp -v'
 alias clip='xclip -selection clipboard'
-alias sido='sudo'
-alias df='sudo btrfs filesystem usage -h /'
 
 # systemd
 alias sc='sudo systemctl'
@@ -32,10 +30,14 @@ alias gco='git checkout'
 alias gls='git status'
 alias gl='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
+alias gap='git add --patch'
 
 # cargo
 alias clippy='rustup run nightly cargo clippy'
 alias c='cargo'
+
+# docker
+alias dc='docker-compose'
 
 # misc
 alias newdir='eval $(/home/jlk/prj/newdir/newdir.py)'
