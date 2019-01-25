@@ -1,39 +1,3 @@
-#
-# Executes commands at login pre-zshrc.
-#
-
-#
-# Browser
-#
-
-export BROWSER='chromium'
-
-#
-# Editors
-#
-
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='less'
-
-#
-# Language
-#
-
-if [[ -z "$LANG" ]]; then
-  export LANG='en_US.UTF-8'
-fi
-
-# rust stuff
-export RUST_SRC_PATH=/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
-
-# go
-export GOPATH=/home/jlk/misc/go
-
-# node
-export npm_config_prefix=/home/jlk/.node_modules
-
-
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
@@ -58,9 +22,6 @@ fpath=(
   $fpath
 )
 
-#
-# Less
-#
 
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
@@ -73,26 +34,11 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-#
 # Temporary Files
-#
-
 if [[ ! -d "$TMPDIR" ]]; then
   export TMPDIR="/tmp/$LOGNAME"
   mkdir -p -m 700 "$TMPDIR"
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-# unlock ssh key
-eval `ssh-agent`
-ssh-add /home/jlk/.ssh/id_rsa
-
-# auto start sway on login
-if [ -z "$DISPLAY" ] && [[ $(tty) = /dev/tty1 ]]; then
-  export XKB_DEFAULT_LAYOUT=us
-  export XKB_DEFAULT_VARIANT=altgr-intl
-  export XKB_DEFAULT_OPTIONS=compose:menu,level3:ralt_switch
-  exec sway
-fi
 
