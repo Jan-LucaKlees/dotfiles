@@ -39,7 +39,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Functionality
 Plug 'Raimondi/delimitMate'
 " Plug 'tpope/vim-fugitive'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
 Plug 'tomtom/tcomment_vim'
 Plug 'scrooloose/nerdtree'
