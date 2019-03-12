@@ -105,6 +105,7 @@ syntax on               " enable syntax highlighting
 " cursor settings
 set cursorline        " highlight cursor line
 " set cursorcolumn      " highlight cursor column
+let g:multi_cursor_exit_from_insert_mode = 0
 
 " wrap like other editors
 set wrap                " word wrap
