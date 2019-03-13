@@ -1,18 +1,10 @@
-# Should you change your keyboard layout somewhen, delete
-# this file and re-run i3-config-wizard(1).
-#
-
-# i3 config file (v4)
-#
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
+# Define the mod key
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango: Sauce Code Powerline Medium 10
 font pango: Input Mono 14
-#font pango: monospace 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -35,64 +27,43 @@ for_window [class="kitty"] border pixel 2
 for_window [class="Thunar"] border pixel 2
 for_window [class="Spotify"] border pixel 2
 
-#scratchpad
-bindsym $mod+z move scratchpad 
+# scratchpad
+bindsym $mod+z move scratchpad
 bindsym $mod+a scratchpad show
 
-
-#background change
-# start a terminal
+# Open terminal
 bindsym $mod+Return exec termite
+# Open file explorer
 bindsym $mod+Shift+Return exec thunar
+
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec i3-dmenu-desktop
-
-# replace dmenu with a fancier alternative
-#bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -i -l 3 -w 250 -sb \#00a000 -sf white -fn Monospace-15"
-
-# replace dmenu with rofi, with some fancy color options
-#bindsym $mod+d exec rofi -show run -color-enabled -color-window "#00ff00" "#a3a3a3" "#a3a3a3" \
-#    -color-normal "#424140" "#f1f2f0" "#424140" "#ffa500" "#424140" \
-#    -color-active "#424140" "#f1f2f0" "#424140" "#ffa500" "#424140" \
-#    -color-urgent "#424140" "#f1f2f0" "#424140" "#ffa500" "#424140"
-
 bindsym $mod+d exec rofi -show combi
-#bindsym $mod+d exec rofi -show run -bg "#424140" -bgalt "#424140" -fg "#f2f1f0" -bc black -hlbg "#ffa500" -hlfg "#424140"
 
 # lock
-#bindsym XF86Launch1 exec i3lock -c 222222
-#bindsym XF86PowerOff exec i3lock -c 222222
-bindsym XF86PowerOff exec /home/jlk/.config/sway/lock.sh blur
+bindsym $mod+x      exec /usr/bin/swaylock-blur
+bindsym XF86Suspend exec /usr/bin/swaylock-blur
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# focus a window (in-between of float and fullscreen)
-bindsym $mod+slash exec /home/jlk/.config/sway/focus.py
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+bindsym $mod+h     focus left
+bindsym $mod+Left  focus left
+bindsym $mod+j     focus down
+bindsym $mod+Down  focus down
+bindsym $mod+k     focus up
+bindsym $mod+Up    focus up
+bindsym $mod+l     focus right
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+H move left
-bindsym $mod+Shift+J move down
-bindsym $mod+Shift+K move up
-bindsym $mod+Shift+L move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+H     move left
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+J     move down
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+K     move up
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+L     move right
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
@@ -105,14 +76,12 @@ bindsym $mod+o split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-#bindsym $mod+e layout toggle
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
-# change focus between tiling / floating windows
 
 # next/previous workspace
 bindsym $mod+Tab workspace back_and_forth
@@ -141,15 +110,15 @@ bindsym $mod+Shift+9 move container to workspace 9
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+E exit
 
-# exit i3 
+# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -157,16 +126,14 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym i resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym 113 resize shrink width 10 px or 10 ppt
-        bindsym 116 resize grow height 10 px or 10 ppt
-        bindsym 111 resize shrink height 10 px or 10 ppt
-        bindsym 114 resize grow width 10 px or 10 ppt
+        bindsym j     resize shrink width 10 px or 10 ppt
+        bindsym Left  resize shrink width 10 px or 10 ppt
+        bindsym k     resize grow height 10 px or 10 ppt
+        bindsym Down  resize grow height 10 px or 10 ppt
+        bindsym i     resize shrink height 10 px or 10 ppt
+        bindsym Up    resize shrink height 10 px or 10 ppt
+        bindsym l     resize grow width 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -174,55 +141,30 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 popup_during_fullscreen leave_fullscreen
 
 bindsym XF86AudioMute        exec ponymix toggle && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec ponymix decrease 5 && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioRaiseVolume exec ponymix increase 5 && pkill -RTMIN+1 i3blocks
 
-bindsym XF86MonBrightnessUp   exec xbacklight -inc 5 && pkill -RTMIN+2 i3blocks
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 && pkill -RTMIN+2 i3blocks
+bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-# colors
-# client.focused #333333 #222222 #fdf6e3
-# client.focused_inactive #333333 #222222 #393939
-# client.unfocused #333333 #222222 #393939
-# client.urgent #333333 #222222 #ffa500
-client.focused #333333 #222222 #fdf6e3 #000000 #fcfbe3
-client.focused_inactive #333333 #222222 #393939
-client.unfocused #333333 #222222 #393939
-client.urgent #333333 #222222 #ffa500 #000000 #ffa500
+# colors;               border, bg,     text,   indicator, child-border
+client.focused          #333333 #222222 #fdf6e3 #000000    #fcfbe3
+client.focused_inactive #333333 #222222 #393939 #000000    #ebead2
+client.unfocused        #333333 #222222 #393939 #000000    #333333
+client.urgent           #333333 #222222 #ffa500 #000000    #ffa500
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    #status_command i3status
     status_command i3blocks
     position top
-    #font pango: Sauce Code Powerline Medium 10
-    #font pango: Source Code Pro for Powerline Medium 10
-    #font pango: Roboto 10
     font pango: Input Mono 15
-    # font pango: monospace 15
-    # font pango: Fira Mono 15
     colors {
-        #background #333333
         background #333330
         statusline #ffffff
-
-        #                    border background text
-        # focused_workspace  #ffa500 #333333 #ffffff
-        # active_workspace   #333333 #5f676a #ffffff
-        # inactive_workspace #333333 #222222 #888888
-        # urgent_workspace   #ee0000 #333333 #ffffff
-
-        # focused_workspace  #333330 #333330 #fcfbe3
-        # active_workspace   #333330 #333330 #aaaaaa
-        # inactive_workspace #333330 #333330 #aaaaaa
-        # urgent_workspace   #333330 #333330 #dc143c
-
         focused_workspace  #333330 #fcfbe3 #333330
         active_workspace   #333330 #333330 #fcfbe3
         inactive_workspace #333330 #333330 #fcfbe3
@@ -233,11 +175,9 @@ bar {
 }
 
 # autostart
-#exec --no-startup-id xcompmgr
 #exec --no-startup-id feh --bg-scale pics/wallpapers/amsterdam.jpg
-exec --no-startup-id feh --bg-scale pics/wallpapers/space_guy.jpg
-exec --no-startup-id compton
 
+# Input device setting
 input 2:14:ETPS/2_Elantech_Touchpad {
     pointer_accel 0.6
 }
