@@ -24,6 +24,6 @@ if [ -z "$DISPLAY" ] && [[ $(tty) = /dev/tty1 ]]; then
   export XKB_DEFAULT_LAYOUT=us
   export XKB_DEFAULT_VARIANT=altgr-intl
   export XKB_DEFAULT_OPTIONS=compose:menu,level3:ralt_switch
-  exec sway
+  exec sway --my-next-gpu-wont-be-nvidia
 fi
 
