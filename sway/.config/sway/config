@@ -192,6 +192,7 @@ output VGA-1 disable
 
 # Input device setting
 input 2:14:ETPS/2_Elantech_Touchpad {
-    pointer_accel 0.6
+    tap enabled
+    pointer_accel 0.5
 }
 
