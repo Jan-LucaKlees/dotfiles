@@ -40,7 +40,7 @@ bindsym $mod+Shift+Return exec thunar
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show combi
+bindsym $mod+d exec dmenu-wl_run -i
 
 # lock
 bindsym $mod+x      exec /usr/bin/swaylock-blur
