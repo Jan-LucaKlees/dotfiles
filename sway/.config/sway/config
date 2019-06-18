@@ -40,7 +40,7 @@ bindsym $mod+Shift+Return exec thunar
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu-wl_run -i
+bindsym $mod+d exec dmenu-wl_run -i -h 33
 
 # lock
 bindsym $mod+x      exec /usr/bin/swaylock-blur
@@ -161,7 +161,7 @@ client.urgent           #333333 #222222 #ffa500 #000000    #ffa500
 bar {
     status_command i3blocks
     position top
-    font pango: Input Mono 15
+    font pango: Source Code Pro 15
     colors {
         background #333330
         statusline #ffffff
@@ -170,12 +170,11 @@ bar {
         inactive_workspace #333330 #333330 #fcfbe3
         urgent_workspace   #333330 #333330 #dc143c
     }
-    tray_output eDP1
-    tray_output HDMI2
+    tray_output eDP-1
+    tray_output HDMI-A-1
 }
 
 # autostart
-#exec --no-startup-id feh --bg-scale pics/wallpapers/amsterdam.jpg
 
 output eDP-1 {
     enable
