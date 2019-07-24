@@ -1,16 +1,19 @@
+# Updating packages and installing dependencies for this script
+pacman -Syu --needed --noconfirm base-devel git stow rust go
+
 # create group
 groupadd wheel
 
 # create user
-useradd -g wheel jlk
+useradd -m -G wheel jlk
 
-# Updating packages and installing dependencies for this script
-pacman -Syu --needed --noconfirm git stow rust
+# add myself to sudoers
+echo 'jlk  ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 # installing yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 rm -rf yay
 
