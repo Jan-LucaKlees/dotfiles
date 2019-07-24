@@ -23,6 +23,10 @@ yay -S --needed --noconfirm intel-ucode nvidia mesa
 
 # installing console experience pack
 yay -S --needed --noconfirm zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh
+git clone https://github.com/tronje/git-prompt-helper.git
+cargo install --path=git-prompt-helper
+git clone https://github.com/tronje/dir-prompt-helper.git
+cargo install --path=dir-prompt-helper
 chsh jlk -s /bin/zsh
 stow zsh
 
