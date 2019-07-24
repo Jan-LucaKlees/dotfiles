@@ -1,4 +1,8 @@
-# TODO: create user
+# create group
+groupadd wheel
+
+# create user
+useradd -g wheel jlk
 
 # Updating packages and installing dependencies for this script
 pacman -Syu --needed --noconfirm git stow rust
