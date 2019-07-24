@@ -1,6 +1,8 @@
 # Updating packages and installing dependencies for this script
 pacman -Syu --needed --noconfirm base-devel git stow rust go
 
+# TODO prompt for hostname
+
 # create group
 groupadd wheel
 
@@ -50,3 +52,8 @@ yay -S --needed --noconfirm firefox keepassxc
 # Development stuff
 yay -S --needed --noconfirm docker docker-compose nodejs npm make pass-git-helper julia
 stow julia pass-git-helper
+
+# generate SSH keys
+# TODO: dynamic comment with username and host name
+ssh-keygen -t rsa -b 4096 -C "email@janlucaklees.de"
+
