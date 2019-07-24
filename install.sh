@@ -40,5 +40,5 @@ yay -S --needed --noconfirm neovim neovim-plug-git python-neovim-git
 yay -S --needed --noconfirm firefox keepassxc
 
 # Development stuff
-yay -S --needed --noconfirm base-devel docker docker-compose nodejs npm make
+yay -S --needed --noconfirm docker docker-compose nodejs npm make
 
