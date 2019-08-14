@@ -3,17 +3,27 @@
 command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
+interval=10
 
 # Show IP address of machine
 [iface]
 color=#85d6d7
-interval=10
 
 # Show SSID of connected Wifi
 [ssid]
 command=nmcli -f name,type connection show --active | grep wifi | cut -d ' ' -f 1
-interval=10
 color=#d33682
+
+# Volume
+[volume-pulseaudio]
+command=echo "$(pamixer --get-volume)"
+interval=once
+signal=1
+
+[battery]
+command=cat /sys/class/power_supply/BAT1/capacity
+interval=10
+color=#fdf6e3
 
 # Date and Time
 [date]

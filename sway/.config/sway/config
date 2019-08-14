@@ -143,9 +143,9 @@ mode "resize" {
 
 popup_during_fullscreen leave_fullscreen
 
-bindsym XF86AudioMute        exec ponymix toggle && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec ponymix decrease 5 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec ponymix increase 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute        exec pamixer --toggle-mute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec pamixer --increase 5  && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec pamixer --decrease 5  && pkill -RTMIN+1 i3blocks
 
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
@@ -175,7 +175,6 @@ bar {
 }
 
 # autostart
-
 output eDP-1 {
     enable
     pos 800 1662

@@ -10,28 +10,32 @@ makepkg -si
 cd ..
 rm -rf yay
 
-# installing hardware stuff
-yay -S --needed --noconfirm intel-ucode nvidia mesa
+# installing all kinds of stuff
+yay -S --needed --noconfirm \
+	# Drivers
+	intel-ucode nvidia mesa \
+	# Network
+	networkmanager
+	# Audio
+	pulseaudio pulseaudio-alsa pamixer
+	# Console experience pack
+	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh
+	# Desktop environment
+	wayland sway swaylock-blur-bin termite i3blocks redshift-wayland-git dmenu-wayland-git
+	# Fonts
+	# TODO: Japanese Symbols, Emoji and other symbols
+	noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
+	# Editor
+	# TODO: install packages here as well
+	neovim neovim-plug-git python-neovim-git
+	# Software
+	firefox keepassxc
+	# Devlopment tools
+	base-devel docker docker-compose nodejs npm make
 
-# installing console experience pack
-yay -S --needed --noconfirm zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh
+# set the default shell to zsh
 chsh jlk -s /bin/zsh
 
-# TODO install nmcli and activate service?
-
-# installing graphical user interface
-yay -S --needed --noconfirm wayland sway swaylock-blur-bin termite i3blocks redshift-wayland-git dmenu-wayland-git
-
-# installing fonts
-yay -S --needed --noconfirm noto-fonts adobe-source-code-pro-fonts
-
-# Neovim
-# TODO: install neovim packages here as well
-yay -S --needed --noconfirm neovim neovim-plug-git python-neovim-git
-
-# software
-yay -S --needed --noconfirm firefox keepassxc
-
-# Development stuff
-yay -S --needed --noconfirm base-devel docker docker-compose nodejs npm make
+# activate networkmanager service
+systemctl enable NetworkManager
 
