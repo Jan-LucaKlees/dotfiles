@@ -31,7 +31,7 @@ yay -S --needed --noconfirm \
 	# Console experience pack
 	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh gitflow-avh gitflow-zshcompletion-avh
 	# Desktop environment
-	wayland sway swaylock-blur-bin termite i3blocks redshift-wayland-git dmenu-wayland-git
+	wayland sway swaylock-blur-bin termite i3blocks redshift-wlr-gamma-control-git dmenu-wayland-git
 	# Fonts
 	# TODO: Japanese Symbols, Emoji and other symbols
 	noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
