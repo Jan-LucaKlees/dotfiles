@@ -19,7 +19,7 @@ yay -S --needed --noconfirm \
 	# Audio
 	pulseaudio pulseaudio-alsa pamixer
 	# Console experience pack
-	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh
+	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh gitflow-avh gitflow-zshcompletion-avh
 	# Desktop environment
 	wayland sway swaylock-blur-bin termite i3blocks redshift-wayland-git dmenu-wayland-git
 	# Fonts

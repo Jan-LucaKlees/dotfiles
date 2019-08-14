@@ -31,6 +31,7 @@ alias gls='git status'
 alias gl='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
 alias gap='git add --patch'
+alias gif='git flow'
 
 # cargo
 alias clippy='rustup run nightly cargo clippy'
