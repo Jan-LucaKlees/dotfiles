@@ -11,9 +11,10 @@ alias nspawn='sudo systemd-nspawn'
 alias mctl='machinectl'
 alias smctl='sudo machinectl'
 
-# pacman
+# pacman / yay
 alias pac='pacman'
 alias spac='sudo pacman'
+alias updateall='yay -Syu && nvim +PlugUpdate +qall'
 
 # neovim
 alias vi='nvim'

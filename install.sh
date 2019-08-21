@@ -59,6 +59,9 @@ systemctl enable NetworkManager
 # install configuration
 stow sway termite systemd nvim julia pass-git-helper
 
+# install nvim plugins
+nvim +PlugInstall +qall
+
 # generate SSH keys
 # TODO: dynamic comment with username and host name
 ssh-keygen -t rsa -b 4096 -C "email@janlucaklees.de"
