@@ -38,7 +38,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 
 " Functionality
-Plug 'Raimondi/delimitMate'
+" Plug 'Raimondi/delimitMate'
 " Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/MatchTagAlways'
@@ -249,19 +249,22 @@ let g:deoplete#disable_auto_complete = 1
 let g:deoplete#sources#rust#racer_binary='/home/jlk/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 
-" inoremap <silent><expr> <TAB> deoplete#mappings#manual_complete()
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+"use <tab> for completion
+function! TabWrap()
+    if pumvisible()
+        return "\<C-N>"
+    elseif strpart( getline('.'), 0, col('.') - 1 ) =~ '^\s*$'
+        return "\<tab>"
+    elseif &omnifunc !~ ''
+        return "\<C-X>\<C-O>"
+    else
+        return "\<C-N>"
+    endif
+endfunction
 
-
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+" power tab
+imap <silent><expr><tab> TabWrap()
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 """ /deoplete
 
 

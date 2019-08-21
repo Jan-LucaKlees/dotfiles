@@ -37,7 +37,7 @@ yay -S --needed --noconfirm \
 	noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
 	# Editor
 	# TODO: install packages here as well
-	neovim neovim-plug-git python-neovim-git
+	neovim neovim-plug-git python-neovim-git nvim-yarp-git
 	# Software
 	firefox keepassxc
 	# Devlopment tools
