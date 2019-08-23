@@ -134,7 +134,7 @@ inoremap <silent> <F2> <esc>:set list!<CR>a
 
 " command mode
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=list:full
 
 " searching
 set hlsearch            " highlight all search results
