@@ -1,3 +1,8 @@
+# nvim
 nvim/.config/nvim/autoload
 nvim/.config/nvim/plug
 nvim/.config/nvim/.netrwhist
+
+# i3 and sway
+window-manager/.config/sway/config
+window-manager/.config/i3/config
