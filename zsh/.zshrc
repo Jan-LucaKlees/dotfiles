@@ -7,15 +7,15 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 bindkey -v
 
 # autojump allows jumping to directories with 'j'
-source /usr/share/autojump/autojump.zsh
+source /usr/local/share/autojump/autojump.zsh
 
 # this enables syntax highlighting, as the name suggests
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/site-functions/git-flow-completion.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/site-functions/git-flow-completion.zsh
 
 # enable fzf keybindings
 # ^T is quite useful, in particular
-source /usr/share/fzf/key-bindings.zsh
+source /usr/local/opt/fzf/shell/key-bindings.zsh
 export FZF_CTRL_T_COMMAND="fd -H" # use fd with hidden files for this command
 
 # .alias.sh just contains some aliases, nothing fancy
@@ -41,7 +41,14 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 autoload -U colors && colors
 
-eval $(dircolors ~/.dircolors)
+if whence dircolors >/dev/null; then
+  eval "$(dircolors -b)"
+  zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+  alias ls='ls --color'
+else
+  export CLICOLOR=1
+  zstyle ':completion:*:default' list-colors ''
+fi
 
 function spectrum_ls () {
     for code in {000..255}; do
@@ -89,6 +96,7 @@ function delimiter_jobs () {
     fi
 }
 
+source .zshrc.grml
 # add the custom tokens to the theme
 grml_theme_add_token virtual_env -f virtual_env_prompt '' ''
 grml_theme_add_token abbreviated-path -f abbr_path_prompt '%B' '%b'

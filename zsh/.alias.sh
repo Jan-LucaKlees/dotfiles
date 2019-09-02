@@ -1,5 +1,5 @@
 # gnutils and the like
-alias ls='ls --group-directories-first --color=auto'
+# alias ls='ls --group-directories-first --color=auto'
 alias cp='cp -v'
 alias clip='xclip -selection clipboard'
 

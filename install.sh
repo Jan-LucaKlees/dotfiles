@@ -1,47 +1,49 @@
 # Updating packages and installing dependencies for this script
-pacman -Syu --needed --noconfirm base-devel git stow rust go
+# pacman -Syu --needed --noconfirm base-devel git stow rust go
+brew install git stow rust go
 
 # TODO prompt for hostname
 
 # create group
-groupadd wheel
+# groupadd wheel
 
 # create user
-useradd -m -G wheel jlk
-cd /home/jlk
+# useradd -m -G wheel jlk
+# cd /home/jlk
 
 # add myself to sudoers
-echo 'jlk  ALL=(ALL:ALL) ALL' >> /etc/sudoers
+# echo 'jlk  ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 # installing yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
-rm -rf yay
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -si --noconfirm
+# cd ..
+# rm -rf yay
 
 # installing all kinds of stuff
-yay -S --needed --noconfirm \
+brew install \
 	# Drivers
-	intel-ucode nvidia mesa \
+	# intel-ucode nvidia mesa \
 	# Network
-	networkmanager
+	# networkmanager
 	# Audio
-	pulseaudio pulseaudio-alsa pamixer
+	# pulseaudio pulseaudio-alsa pamixer
 	# Console experience pack
-	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh gitflow-avh gitflow-zshcompletion-avh
+	zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh
 	# Desktop environment
-	wayland sway swaylock-blur-bin termite i3blocks redshift-wlr-gamma-control-git dmenu-wayland-git
+	# wayland sway swaylock-blur-bin termite i3blocks redshift-wlr-gamma-control-git dmenu-wayland-git
 	# Fonts
 	# TODO: Japanese Symbols, Emoji and other symbols
-	noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
+	# noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
 	# Editor
 	# TODO: install packages here as well
-	neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
+	# neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
+	neovim
 	# Software
-	firefox keepassxc
+	# firefox keepassxc
 	# Devlopment tools
-	base-devel docker docker-compose nodejs npm make pass-git-helper julia
+	# base-devel docker docker-compose nodejs npm make pass-git-helper julia
 
 # installing helpers for zsh config
 git clone https://github.com/tronje/git-prompt-helper.git
@@ -49,20 +51,23 @@ cargo install --path=git-prompt-helper
 git clone https://github.com/tronje/dir-prompt-helper.git
 cargo install --path=dir-prompt-helper
 
+# install zsh grml theme
+wget -O .zshrc.grml https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+
 # set the default shell to zsh
-chsh jlk -s /bin/zsh
+chsh -s $(which zsh)
 stow zsh
 
 # activate networkmanager service
-systemctl enable NetworkManager
+# systemctl enable NetworkManager
 
 # install configuration
-stow sway termite systemd nvim julia pass-git-helper
+# stow sway termite systemd nvim julia pass-git-helper
 
 # install nvim plugins
-nvim +PlugInstall +qall
+# nvim +PlugInstall +qall
 
 # generate SSH keys
 # TODO: dynamic comment with username and host name
-ssh-keygen -t rsa -b 4096 -C "email@janlucaklees.de"
+# ssh-keygen -t rsa -b 4096 -C "email@janlucaklees.de"
 
