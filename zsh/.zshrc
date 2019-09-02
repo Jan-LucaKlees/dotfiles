@@ -19,7 +19,7 @@ source /usr/share/fzf/key-bindings.zsh
 export FZF_CTRL_T_COMMAND="fd -H" # use fd with hidden files for this command
 
 # .alias.sh just contains some aliases, nothing fancy
-source /home/jlk/.alias.sh
+source $HOME/.alias.sh
 
 # Don't send SIGHUP to background processes when the shell exits.
 setopt nohup
@@ -33,7 +33,7 @@ export LESS="-RI"
 setopt nobeep
 
 # history settings
-export HISTFILE=/home/jlk/.zsh_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=25000
 setopt HIST_IGNORE_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST

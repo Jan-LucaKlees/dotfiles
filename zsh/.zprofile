@@ -9,16 +9,16 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  /home/jlk/.cargo/bin
-  /home/jlk/.local/bin
-  /home/jlk/.node_modules/bin
-  /home/jlk/redshift/root/bin
+  $HOME/.cargo/bin
+  $HOME/.local/bin
+  $HOME/.node_modules/bin
+  $HOME/redshift/root/bin
   $path
 )
 
 # add dir with some completions to fpath
 fpath=(
-  /home/jlk/.zsh-completions
+  $HOME/.zsh-completions
   $fpath
 )
 

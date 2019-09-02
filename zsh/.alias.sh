@@ -42,7 +42,7 @@ alias c='cargo'
 alias dc='docker-compose'
 
 # misc
-alias newdir='eval $(/home/jlk/prj/newdir/newdir.py)'
+alias newdir='eval $($HOME/prj/newdir/newdir.py)'
 alias py='python'
 alias weather='curl -s wttr.in/Hamburg'
 alias icat='kitty icat --align=left'

@@ -246,8 +246,8 @@ set completeopt=menuone,menu,longest,preview
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#disable_auto_complete = 1
-let g:deoplete#sources#rust#racer_binary='/home/jlk/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+let g:deoplete#sources#rust#racer_binary='$HOME/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 
 "use <tab> for completion
 function! TabWrap()

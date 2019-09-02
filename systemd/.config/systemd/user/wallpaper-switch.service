@@ -3,7 +3,7 @@ Description=switches the wallpaper
 
 [Service]
 Type=oneshot
-ExecStart=/home/jlk/prj/wallpaper-switcher/main.py
+ExecStart=$HOME/prj/wallpaper-switcher/main.py
 
 [Install]
 WantedBy=default.target

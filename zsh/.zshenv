@@ -12,11 +12,11 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # rust stuff
-export RUST_SRC_PATH=/home/jlk/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
+export RUST_SRC_PATH=$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 
 # go
-export GOPATH=/home/jlk/misc/go
+export GOPATH=$HOME/misc/go
 
 # node
-export npm_config_prefix=/home/jlk/.node_modules
+export npm_config_prefix=$HOME/.node_modules
 

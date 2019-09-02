@@ -17,7 +17,7 @@ fi
 
 # unlock ssh key
 eval `ssh-agent`
-ssh-add /home/jlk/.ssh/id_rsa
+ssh-add $HOME/.ssh/id_rsa
 
 echo "Which display server to run?"
 select dps in "Wayland" "Xorg"; do
