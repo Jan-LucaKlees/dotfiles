@@ -16,8 +16,8 @@ if (( $+commands[fortune] )); then
 fi
 
 # unlock ssh key
-eval `ssh-agent`
-ssh-add $HOME/.ssh/id_rsa
+# eval `ssh-agent`
+# ssh-add $HOME/.ssh/id_rsa
 
 echo "Which display server to run?"
 select dps in "Wayland" "Xorg"; do
