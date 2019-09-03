@@ -96,7 +96,9 @@ function delimiter_jobs () {
     fi
 }
 
-source .zshrc.grml
+# Source the grml theme to make the following config work
+source $HOME/.zshrc.grml
+
 # add the custom tokens to the theme
 grml_theme_add_token virtual_env -f virtual_env_prompt '' ''
 grml_theme_add_token abbreviated-path -f abbr_path_prompt '%B' '%b'
