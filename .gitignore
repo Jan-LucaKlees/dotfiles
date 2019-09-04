@@ -9,3 +9,7 @@ window-manager/.config/i3/config
 
 # IntelliJ
 .idea
+
+# Mac stuff
+.DS_Store
+
