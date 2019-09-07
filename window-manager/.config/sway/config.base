@@ -144,10 +144,10 @@ bindsym XF86MonBrightnessUp   exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 # colors;               border, bg,     text,   indicator, child-border
-client.focused          #333333 #222222 #fdf6e3 #000000    #fcfbe3
-client.focused_inactive #333333 #222222 #393939 #000000    #ebead2
-client.unfocused        #333333 #222222 #393939 #000000    #333333
-client.urgent           #333333 #222222 #ffa500 #000000    #ffa500
+client.focused          #333330 #222222 #fdf6e3 #000000    #fcfbe3
+client.focused_inactive #333330 #222222 #393939 #000000    #ebead2
+client.unfocused        #333330 #222222 #393939 #000000    #333333
+client.urgent           #333330 #222222 #ffa500 #000000    #ffa500
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -156,12 +156,12 @@ bar {
     position top
     font pango: Source Code Pro 15
     colors {
-        background #333330
+        background #333330aa
         statusline #ffffff
-        focused_workspace  #333330 #fcfbe3 #333330
-        active_workspace   #333330 #333330 #fcfbe3
-        inactive_workspace #333330 #333330 #fcfbe3
-        urgent_workspace   #333330 #333330 #dc143c
+        focused_workspace  #33333000 #fcfbe300 #fcfbe3
+        active_workspace   #33333000 #33333000 #fcfbe3aa
+        inactive_workspace #333330aa #333330aa #fcfbe3aa
+        urgent_workspace   #33333000 #33333000 #dc143c
     }
     tray_output eDP-1
     tray_output HDMI-A-1
