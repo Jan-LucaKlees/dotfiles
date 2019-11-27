@@ -14,7 +14,7 @@ alias smctl='sudo machinectl'
 # pacman / yay
 alias pac='pacman'
 alias spac='sudo pacman'
-alias updateall='yay -Syu && nvim +PlugUpdate +qall'
+alias updateall='yay -Syu && nvim +PlugUpdate +UpdateRemotePlugins +qall'
 
 # neovim
 alias vi='nvim'
