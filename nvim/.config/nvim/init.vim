@@ -12,7 +12,7 @@ call plug#begin(expand('~/.config/nvim/plug'))
 Plug 'plasticboy/vim-markdown', {'depends': 'godlygeek/tabular'}
 " Plug 'lervag/vim-latex'
 Plug 'pangloss/vim-javascript'
-Plug 'chemzqm/vim-jsx-improve'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
 " Plug 'rust-lang/rust.vim'
