@@ -5,11 +5,13 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.sil.ukelele.keyboardlayout.usinternationnodeadkeys</string>
 	<key>CFBundleName</key>
-	<string>U.S. Internation no dead keys</string>
+	<string>U.S. International no dead keys</string>
 	<key>CFBundleVersion</key>
 	<string></string>
 	<key>KLInfo_U.S. International no dead keys</key>
 	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
 		<key>TISInputSourceID</key>
 		<string>org.sil.ukelele.keyboardlayout.usinternationnodeadkeys.u.s.internationalnodeadkeys</string>
 		<key>TISIntendedLanguage</key>
