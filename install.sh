@@ -10,7 +10,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # installing all kinds of stuff
 echo "Installing packages..."
-brew install stow rust go wget
+brew install stow rust go wget python cmake
 # Console experience pack
 brew install zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh
 # neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
@@ -36,9 +36,16 @@ echo "Make zsh default shell..."
 chsh -s $(which zsh)
 stow zsh
 
-# install nvim plugins
-# nvim +PlugInstall +qall
+# Make nvim work
+# Installing Vim Plug
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install python support for nvim
+/usr/local/bin/pip install neovim
+/usr/local/bin/pip install --upgrade neovim
+# Install config
 stow nvim
+# Install plugins
+nvim +PlugInstall +qall
 
 # generate SSH keys
 # TODO prompt for hostname
