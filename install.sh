@@ -15,6 +15,8 @@ brew install stow rust go wget
 brew install zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh
 	# neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
 brew install neovim
+# Developer experience stuff
+brew install nvm
 
 # installingbrew install helpers for zsh config
 echo "Installing Tronjes zsh helpers..."
