@@ -47,3 +47,4 @@ alias py='python'
 alias weather='curl -s wttr.in/Hamburg'
 alias icat='kitty icat --align=left'
 alias ipython='ipython --no-confirm-exit'
+

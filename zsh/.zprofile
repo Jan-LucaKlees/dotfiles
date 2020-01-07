@@ -12,7 +12,6 @@ path=(
   $HOME/.cargo/bin
   $HOME/.local/bin
   $HOME/.node_modules/bin
-  $HOME/redshift/root/bin
   $path
 )
 

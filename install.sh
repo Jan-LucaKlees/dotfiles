@@ -11,9 +11,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # installing all kinds of stuff
 echo "Installing packages..."
 brew install stow rust go wget
-	# Console experience pack
+# Console experience pack
 brew install zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh
-	# neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
+# neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
 brew install neovim
 # Developer experience stuff
 brew install nvm
