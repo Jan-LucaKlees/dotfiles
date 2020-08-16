@@ -122,7 +122,7 @@ setopt AUTO_MENU
 setopt AUTO_LIST
 setopt AUTO_PARAM_SLASH
 setopt EXTENDED_GLOB
-setopt MENU_COMPLETE
+unsetopt MENU_COMPLETE
 unsetopt FLOW_CONTROL
 
 # Use caching to make completion for commands such as dpkg and apt usable.
