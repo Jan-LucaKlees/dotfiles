@@ -11,10 +11,8 @@ alias nspawn='sudo systemd-nspawn'
 alias mctl='machinectl'
 alias smctl='sudo machinectl'
 
-# pacman / yay
-alias pac='pacman'
-alias spac='sudo pacman'
-alias updateall='yay -Syu && nvim +PlugUpdate +UpdateRemotePlugins +qall'
+# brew
+alias updateall='brew update && brew upgrade && brew cask upgrade && npm -g update && python3 -m pip install --user --upgrade pynvim && nvim +PlugUpgrade +PlugUpdate +UpdateRemotePlugins +qall'
 
 # neovim
 alias vi='nvim'
