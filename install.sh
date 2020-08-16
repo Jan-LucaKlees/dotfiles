@@ -10,19 +10,21 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 # installing all kinds of stuff
 echo "Installing packages..."
-brew install stow rust go wget python cmake
-# Console experience pack
-brew install zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh
-# neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
-brew install neovim
-# Developer experience stuff
-brew install nvm
+brew install stow rust go wget python cmake \
+  # Console experience pack
+  zsh zsh-syntax-highlighting autojump fzf ripgrep git-flow-avh fortune
+  # neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
+  neovim
+  # Developer experience stuff
+  nvm
 
 # installingbrew install helpers for zsh config
 echo "Installing Tronjes zsh helpers..."
+# Git Prompt Helper
 git clone https://github.com/tronje/git-prompt-helper.git
 cargo install --path=git-prompt-helper
 rm -rf git-prompt-helper
+# Dir Prompt Helper
 git clone https://github.com/tronje/dir-prompt-helper.git
 cargo install --path=dir-prompt-helper
 rm -rf dir-prompt-helper
