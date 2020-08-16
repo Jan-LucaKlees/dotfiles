@@ -3,6 +3,9 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 # Customize to your needs...
 
+# Source the grml theme to make the grml commands / settings work
+source $HOME/.zshrc.grml
+
 # enables Vi mode when hitting ESC
 bindkey -v
 
@@ -96,8 +99,6 @@ function delimiter_jobs () {
     fi
 }
 
-# Source the grml theme to make the following config work
-source $HOME/.zshrc.grml
 
 # add the custom tokens to the theme
 grml_theme_add_token virtual_env -f virtual_env_prompt '' ''
