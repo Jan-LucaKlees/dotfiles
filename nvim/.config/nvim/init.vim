@@ -9,6 +9,7 @@
 call plug#begin(expand('~/.config/nvim/plug'))
 
 " Language support
+Plug 'lumiliet/vim-twig'
 Plug 'plasticboy/vim-markdown', {'depends': 'godlygeek/tabular'}
 " Plug 'lervag/vim-latex'
 Plug 'pangloss/vim-javascript'
