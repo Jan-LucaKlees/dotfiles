@@ -22,47 +22,24 @@ rm -rf yay
 
 # installing all kinds of stuff
 yay -S --needed --noconfirm \
-	# Drivers
-	intel-ucode nvidia mesa \
-	# Network
-	networkmanager
-	# Audio
-	pulseaudio pulseaudio-alsa pamixer
-	# Console experience pack
-	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep ssh gitflow-avh gitflow-zshcompletion-avh
-	# Desktop environment
-	wayland sway swaylock-blur-bin termite i3blocks redshift-wlr-gamma-control-git dmenu-wayland-git
-	# Fonts
-	# TODO: Japanese Symbols, Emoji and other symbols
-	noto-fonts adobe-source-code-pro-fonts ttf-font-awesome
-	# Editor
-	# TODO: install packages here as well
+	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep \
 	neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
-	# Software
-	firefox keepassxc
-	# Devlopment tools
-	base-devel docker docker-compose nodejs npm make pass-git-helper julia
 
 # installing helpers for zsh config
 git clone https://github.com/tronje/git-prompt-helper.git
 cargo install --path=git-prompt-helper
+rm -rf git-prompt-helper
 git clone https://github.com/tronje/dir-prompt-helper.git
 cargo install --path=dir-prompt-helper
+rm -rf dir-prompt-helper
 
 # set the default shell to zsh
 chsh jlk -s /bin/zsh
 stow zsh
 
-# activate networkmanager service
-systemctl enable NetworkManager
-
 # install configuration
-stow sway termite systemd nvim julia pass-git-helper
+stow terminte nvim
 
 # install nvim plugins
 nvim +PlugInstall +qall
-
-# generate SSH keys
-# TODO: dynamic comment with username and host name
-ssh-keygen -t rsa -b 4096 -C "email@janlucaklees.de"
 

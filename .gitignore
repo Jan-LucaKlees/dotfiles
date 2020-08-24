@@ -6,3 +6,8 @@ nvim/.config/nvim/.netrwhist
 # i3 and sway
 window-manager/.config/sway/config
 window-manager/.config/i3/config
+
+# Install files
+dir-prompt-helper
+git-prompt-helper
+

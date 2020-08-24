@@ -12,7 +12,6 @@ path=(
   /home/jlk/.cargo/bin
   /home/jlk/.local/bin
   /home/jlk/.node_modules/bin
-  /home/jlk/redshift/root/bin
   $path
 )
 
