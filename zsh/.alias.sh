@@ -12,7 +12,7 @@ alias mctl='machinectl'
 alias smctl='sudo machinectl'
 
 # brew
-alias updateall='brew update && brew upgrade && brew cask upgrade && npm -g update && python3 -m pip install --user --upgrade pynvim && nvim +PlugUpgrade +PlugUpdate +UpdateRemotePlugins +qall'
+alias updateall='softwareupdate --all --install --force && brew update && brew upgrade && brew upgrade --cask && npm -g update && python3 -m pip install --user --upgrade pynvim && nvim +PlugUpgrade +PlugUpdate +UpdateRemotePlugins +qall && npm i -g neovim'
 
 # neovim
 alias vi='nvim'
