@@ -30,7 +30,12 @@ alias gls='git status'
 alias gl='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 alias glg='git log --topo-order --all --graph --pretty=format:"${_git_log_oneline_format}"'
 alias gap='git add --patch'
-alias gif='git flow'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias ggi='git commit'
+alias ggia='git commit --amend --no-edit'
+alias ggiae='git commit --amend'
+alias gri='git rebase --interactive'
 
 # cargo
 alias clippy='rustup run nightly cargo clippy'
@@ -38,6 +43,8 @@ alias c='cargo'
 
 # docker
 alias dc='docker-compose'
+alias dcup='dc up -d'
+alias dce='dc exec'
 
 # misc
 alias newdir='eval $($HOME/prj/newdir/newdir.py)'
