@@ -66,4 +66,7 @@ alias py='python'
 alias weather='curl -s wttr.in/Hamburg'
 alias icat='kitty icat --align=left'
 alias ipython='ipython --no-confirm-exit'
+alias phpcs='phpcs --standard=PSR12 --exclude=Generic.Files.LineLength'
+alias phpcsl='phpcs --standard=PSR12'
+alias phpcbf='phpcbf --standard=PSR12'
 
