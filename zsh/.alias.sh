@@ -43,8 +43,22 @@ alias c='cargo'
 
 # docker
 alias dc='docker-compose'
+alias mc='mutagen compose --file docker-compose.yml --file docker-compose.mutagen.yml'
 alias dcup='dc up -d'
+alias mcup='mc up -d'
 alias dce='dc exec'
+alias mce='mc exec'
+alias dcre='dcup --no-deps --build'
+alias mcre='mcup --no-deps --build'
+alias dcr='dc run --rm'
+alias mcr='mc run --rm'
+
+# Mutagen
+alias ms='mutagen sync'
+alias msl='ms list'
+alias mst='ms terminate'
+alias msta='mst --all'
+
 
 # misc
 alias newdir='eval $($HOME/prj/newdir/newdir.py)'
