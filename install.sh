@@ -1,5 +1,5 @@
 # Updating packages and installing dependencies for this script
-pacman -Syu --needed --noconfirm base-devel git stow rust go
+pacman -Syu --needed --noconfirm git stow
 
 # TODO prompt for hostname
 
@@ -22,24 +22,23 @@ rm -rf yay
 
 # installing all kinds of stuff
 yay -S --needed --noconfirm \
-	zsh grml-zsh-config zsh-syntax-highlighting autojump fzf ripgrep \
+	# Console experience pack
+	zsh manjaro-zsh-config autojump fzf ripgrep ssh
+	# Editor
 	neovim neovim-plug-git python-pynvim python2-pynvim ruby-neovim nvim-yarp-git
+	# Software
+	firefox keepassxc
+	# Devlopment tools
+	base-devel docker docker-compose nodejs npm make julia
 
-# installing helpers for zsh config
-git clone https://github.com/tronje/git-prompt-helper.git
-cargo install --path=git-prompt-helper
-rm -rf git-prompt-helper
-git clone https://github.com/tronje/dir-prompt-helper.git
-cargo install --path=dir-prompt-helper
-rm -rf dir-prompt-helper
-
-# set the default shell to zsh
+# Install zsh
 chsh jlk -s /bin/zsh
 stow zsh
 
-# install configuration
-stow terminte nvim
-
-# install nvim plugins
+# Install nvim
+stow nvim
 nvim +PlugInstall +qall
+
+# generate SSH keys
+ssh-keygen -t ed25519 -a 512 -C "email@janlucaklees.de"
 
